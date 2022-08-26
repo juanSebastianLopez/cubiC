@@ -1,0 +1,114 @@
+
+.contenedor{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $Main-BG;
+    gap: 20px;
+    &__card{
+        width: 330px;
+        border-radius: 15px;
+        padding: 25px;
+        background: $Card-BG;
+        position: relative;
+        &-imagen{
+            width: 271px;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        &-hover{
+            @extend .contenedor__card-imagen;
+            display: none;
+            position: absolute;
+            top: 26px;
+            left: 29px;
+            height: 271px;
+            width: 271px;
+            background-color: hsla(178, 100%, 50%, 0.53);
+            & img{
+                display: flex;
+                object-fit: contain;
+                width: 20%;
+            }
+        }
+        &-info{
+            height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-gema{
+                color: $Cyan;
+                font-size: 1rem;
+                display: flex;
+                align-items: center;
+            }
+            &-gema img{
+                padding-right: 5px;
+            }
+            &-text{
+                color: $Soft-blue;
+                font-size: .8rem;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+            }
+            &-text img{
+                padding-right: 5px;
+            }
+        }
+        &-titulo{
+            color: $White;
+            font-size: 1.3rem;
+            padding-top: 5px;
+            &:hover{
+                cursor: pointer;
+                color: $Cyan;
+            }
+        }
+        &-descripcion{
+            color: $Soft-blue;
+            font-size: 1rem ;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+        &-estadisticas{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid $line;
+        }
+    }
+    &__footer{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &-text{
+            font-size: .9rem;
+            color: $Soft-blue;
+            font-weight: 300;
+            padding-left: 13px;
+            & span{
+                color: $White;
+                font-weight: 400;
+                cursor: pointer;
+                &:hover{
+                    color: $Cyan;
+                }
+            }
+        }
+        &-img{
+            width: 45px;
+            border: 2px solid $White;
+            border-radius: 50%;
+        }
+    }
+}
